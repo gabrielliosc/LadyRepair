@@ -1,11 +1,15 @@
-import logoImg from '../../assets/logo.svg'
+import logoImg from '../../assets/logo_completa.svg'
+import { Menu } from '@styled-icons/feather/Menu'
+import { Container } from './style'
+
 
 
 export function Header(){
+    
     return (
-        <header>
+        <Container>
             <img src={logoImg} alt="" />
-            <div className="menu-hamburguer">-----</div>
-        </header>
+            <Menu size="30" />
+        </Container>
     )
 }
