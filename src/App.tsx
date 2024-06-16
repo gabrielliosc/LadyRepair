@@ -1,49 +1,60 @@
 import { Header } from "./components/Header"
+import { Suggestion } from "./components/Suggestion"
 import { Tag } from "./components/Tag"
+import { Hero, LocalInput, PopContainer, SearchButton, SearchContainer, SearchInput } from "./style"
+
+
+
 
 function App() {
 
   const tags = [
     {
       'id': '1',
-      'title': 'Pintor'
-    },
-    {
-      'id': '2',
       'title': 'Diarista'
     },
     {
+      'id': '2',
+      'title': 'Serviço gerais'
+    },
+    {
       'id': '3',
-      'title': 'Eletricista'
+      'title': 'Pintora'
     },
     {
       'id': '4',
-      'title': 'Encanador'
+      'title': 'Encanadora'
     },
     {
       'id': '5',
-      'title': 'Serviço gerais'
+      'title': 'Eletricista'
     }
   ]
+
+  
 
   return (
     <>
       <Header />
 
-      <div>Que tipo de serviço você está procurando?</div>
+      <Hero>
+        <h1>Que tipo de serviço você está procurando?</h1>
 
-      <input placeholder="Busque por um serviço ou profissional" />
-      <input type="text" placeholder="SP" />
+        <SearchContainer>
+          <SearchInput placeholder="Busque por um serviço" />
+          <LocalInput type="text" placeholder="SP" />
+          <SearchButton>Buscar</SearchButton>
+        </SearchContainer>
 
-      <button>Buscar</button>
+        <PopContainer>
+          <strong>Populares:</strong>
+            {tags.map(tag => (
+              <Tag key={tag.id} title={tag.title} />
+            ))}
+        </PopContainer>
+      </Hero>
 
-      <strong>Populares:</strong>
-      {tags.map(tag => (
-        <Tag key={tag.id} title={tag.title} />
-      ))}
-
-      <span>Recomendados</span>
-      <h2>Profissionais mais recomendados</h2>
+      <Suggestion />            
     </>
   )
 }
