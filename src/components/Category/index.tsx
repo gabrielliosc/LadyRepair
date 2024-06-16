@@ -1,9 +1,7 @@
-
 interface CategoryProps {
     src: string,
     title: string
 }
-
 
 export function Category({ src, title }: CategoryProps) {
     return (
