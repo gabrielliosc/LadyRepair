@@ -1,10 +1,10 @@
-// interface TagProps{
-
-// }
+import { CategoryTag } from "./style";
 
 
 export function Tag({title}: {title: string}) {
     return (
-        <button>{title}</button>
+        <CategoryTag>
+            {title}
+        </CategoryTag>
     )
 }
