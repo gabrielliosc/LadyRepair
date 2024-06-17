@@ -1,6 +1,7 @@
 export default {
     COLORS: {
         PRIMARY_MAIN: "#FF521D",
+        PRIMARY_MAIN_BACKGROUND: 'hsla(14, 100%, 56%, 0.1)',
         PRIMARY_DARK: "#C71D07",
         PRIMARY_LIGHT: "#FFA170",
         PRIMARY_LIGHTER: "#FFC8A8",
