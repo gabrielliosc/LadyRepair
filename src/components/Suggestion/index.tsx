@@ -21,7 +21,7 @@ export function Suggestion() {
             <span id="suggest">Recomendados</span>
             <h2>Profissionais mais recomendados</h2>
             <Swiper 
-                spaceBetween={30}
+                spaceBetween={50}
                 slidesPerView={'auto'}
                 simulateTouch={true}
             >
