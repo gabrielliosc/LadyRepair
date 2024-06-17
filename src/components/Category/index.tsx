@@ -1,13 +1,16 @@
+import { ReactNode } from 'react';
+import { CategoryContainer } from './style';
+
 interface CategoryProps {
-    src: string,
+    src: ReactNode,
     title: string
 }
 
 export function Category({ src, title }: CategoryProps) {
     return (
-        <div>
-            <img src={src} alt="" />
+        <CategoryContainer>
+            <div>{src}</div>
             <p>{title}</p>
-        </div>
+        </CategoryContainer>
     )
 }
