@@ -1,5 +1,8 @@
 import styled from "styled-components";
 
+export const AppContainer = styled.div`
+    background-color: ${({ theme }) => theme.COLORS.SUPORT_BACKGROUND_100};
+`
 export const Hero = styled.div`
     h1 {
         text-align: center;
@@ -12,6 +15,12 @@ export const Hero = styled.div`
     background-color: ${({ theme }) => theme.COLORS.SUPORT_BACKGROUND_200};
     padding: 3rem 1rem;
     margin: 1rem;
+`
+export const CategoriesContainer = styled.div`
+    padding: 1rem;
+    .swiper-slide {
+        width: 6.25rem;
+    }
 `
 export const SearchContainer = styled.div`
     display: grid;
