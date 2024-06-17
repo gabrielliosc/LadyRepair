@@ -3,6 +3,7 @@ import { Card } from "../Card"
 import mockupImg from '../../assets/mockup-1.png'
 import { SuggestionContainer } from "./style"
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { SectionTitle } from "../SectionTitle";
 
 
 
@@ -18,8 +19,7 @@ export function Suggestion() {
 
     return (
         <SuggestionContainer>
-            <span id="suggest">Recomendados</span>
-            <h2>Profissionais mais recomendados</h2>
+            <SectionTitle title="Profissionais mais recomendados" subtitle="Recomendados" />
             <Swiper 
                 spaceBetween={50}
                 slidesPerView={'auto'}
