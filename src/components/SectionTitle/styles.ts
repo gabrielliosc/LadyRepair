@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const SectionTitleContainer = styled.div`
+    margin-top: 3.5rem;
     span{
         font-size: 1.125rem;
         font-weight: 700;
