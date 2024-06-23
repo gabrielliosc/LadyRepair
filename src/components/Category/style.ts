@@ -11,6 +11,11 @@ export const CategoryContainer = styled.div`
         width: 6rem;
         padding: 1.5rem;
         text-align: center;
+
+        &:hover {
+            border-color: ${({ theme }) => theme.COLORS.PRIMARY_MAIN};
+            cursor: pointer;
+        }
     }
     width: fit-content;
     font-size: 0.875rem;
