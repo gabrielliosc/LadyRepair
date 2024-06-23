@@ -27,6 +27,8 @@ export default {
         FEEDBACK_DANGER: "#CC1F1F",
         FEEDBACK_SUCCESS_MAIN: "#6EBF2F",
         FEEDBACK_SUCCESS_900: "#19A64B",
-        FEEDBACK_SUCCESS_800: "#1FC75B"
+        FEEDBACK_SUCCESS_800: "#1FC75B",
+
+        BACKGROUND_GRADIENT: "linear-gradient(56.9deg, #C71D07 9.86%, #FFC8A8 126.67%)"
     }
 }
