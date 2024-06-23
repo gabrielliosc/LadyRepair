@@ -1,9 +1,11 @@
-import { CardContainer, CardTitle, CardContent, CardLocation, CardVerified, CardCategory, CardStars, CardPrice, CardFooter, CardTag } from "./style"
-// import { EmptyStar, Star } from "../Icons"
+import { CardContainer, CardTitle, CardContent, CardLocation, CardVerified, CardCategory, CardStars, CardPrice, CardFooter, CardTag, CardBookmark, CardBookmarkActive } from "./style"
 import { Bookmark } from '@styled-icons/bootstrap/Bookmark'
+import { BookmarkFill } from '@styled-icons/bootstrap/BookmarkFill'
 import { Location } from '@styled-icons/fluentui-system-regular/Location'
 import { Star } from'@styled-icons/bootstrap/Star'
 import { StarFill } from'@styled-icons/bootstrap/StarFill'
+
+import { useState } from 'react'
 
 interface CardProps {
     id: string,
@@ -23,6 +25,12 @@ export function Card(contractor: CardProps) {
         contractor.rating >= 3? <StarFill size={14}/>: <Star size={14} />,
         contractor.rating >= 4? <StarFill size={14}/>: <Star size={14} />,
         contractor.rating == 5? <StarFill size={14}/>: <Star size={14} />]
+    
+    const [bookmarkCardActive, setBookmarkCardActive] = useState(false)
+
+    const handleBookmarkActiveClick = () => setBookmarkCardActive(false)
+
+    const handleBookmarkClick = () => setBookmarkCardActive(true)
 
     return (
         <CardContainer>
@@ -31,7 +39,14 @@ export function Card(contractor: CardProps) {
             <CardContent>
                 <CardTitle>
                     <span>{contractor.name}</span>
-                    <span><Bookmark size={20}/></span>
+                    {bookmarkCardActive? 
+                    <CardBookmarkActive>
+                        <BookmarkFill size={20} onClick={handleBookmarkActiveClick} />
+                    </CardBookmarkActive>
+                    : 
+                    <CardBookmark>
+                        <Bookmark size={20} onClick={handleBookmarkClick} />
+                    </CardBookmark>}
                 </CardTitle>
                 
                 <CardCategory>

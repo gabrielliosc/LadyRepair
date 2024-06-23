@@ -20,7 +20,11 @@ export const CardContainer = styled.div`
         border-top-right-radius: 0.5rem;
         border-top-left-radius: 0.5rem;
     }
-`;
+
+    &:hover {
+        box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+    }
+`
 
 export const CardContent = styled.div`
     display: flex;
@@ -29,7 +33,7 @@ export const CardContent = styled.div`
     padding: 1rem;
     gap: 1rem;
     width: 100%;
-`;
+`
 
 export const CardTag = styled.span`
     font-size: 0.75rem;
@@ -43,6 +47,7 @@ export const CardTag = styled.span`
     top: 0.75rem;
     left: 0.75rem;
 `
+
 export const CardTitle = styled.h3`
     font-size: 1rem;
     color: ${({ theme }) => theme.COLORS.NEUTRAL_900};
@@ -52,6 +57,22 @@ export const CardTitle = styled.h3`
     align-items: center;
     width: 100%;
 `
+
+export const CardBookmarkActive = styled.span`
+    color: ${({ theme }) => theme.COLORS.PRIMARY_MAIN};
+    padding: 0.125rem 0.75rem;
+`
+
+export const CardBookmark = styled.span`
+    color: ${({ theme }) => theme.COLORS.NEUTRAL_700};
+    padding: 0.125rem 0.75rem;
+
+    &:hover {
+        color: ${({ theme }) => theme.COLORS.PRIMARY_MAIN};
+        cursor: pointer;
+    }
+`
+
 export const CardCategory = styled.span`
     font-size: 0.875rem;
     font-weight: 400;
@@ -77,15 +98,16 @@ export const CardVerified = styled.span`
     font-weight: 400;
     background-color: ${({ theme }) => theme.COLORS.PRIMARY_MAIN_BACKGROUND};
 `
+
 export const CardStars = styled.div`
     display: flex;
     align-items: center;
     gap: 0.25rem;
     color: ${({ theme }) => theme.COLORS.PRIMARY_MAIN};
 `
+
 export const CardPrice = styled.div`
     font-size: 1rem;
-    color: ${({ theme }) => theme.COLORS.PRIMARY_MAIN};
     font-weight: 700;
 
     span {
@@ -95,6 +117,7 @@ export const CardPrice = styled.div`
         margin-left: 0.25rem;
     }
 `
+
 export const CardFooter = styled.div`
     display: flex;
     justify-content: space-between;
